@@ -1,0 +1,120 @@
+
+.request{
+	width:800px;
+	margin: 0 auto;
+	background-color: $bgelements;
+	min-height: 484px;
+	font-family: 'Roboto', sans-serif;
+	@include mfont(14px,1.42);
+	display:flex;
+	justify-content:center;
+	.desc-text{
+		width:50%;
+		background-color: #F5F7FA;
+		padding-top: 45px;
+		padding-left: 40px;
+		h2{font-size: 24px;}
+		p{
+			margin-top: 27px;
+			width:275px;
+		}
+
+	}
+}
+.request-form{
+	width: 50%;
+	padding: 42px 40px;
+	form{
+		display:flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
+	.radio-labels{
+		input{
+			display: none;
+		}
+		display: flex;
+		justify-content:space-around;
+		
+		width: 45%;
+	}
+	label.req-btn{
+		display: block;
+		height: 27px;
+		width: 65px;
+		cursor:pointer;
+		text-align:center;
+	}
+	#request-radio-1:checked ~ label:nth-of-type(1),
+	#request-radio-2:checked ~ label:nth-of-type(2){
+		background: url(../img/selected-btn-back.jpg) repeat-x 0 100%;
+	}
+	select{
+		width: 100%;
+		padding: 10px 15px;
+		margin: 10px 0;
+		border: 1px solid #ccc;
+		border-radius: 2px;
+	}
+	.select_option {
+		padding: 10px 15px;
+		margin: 8px 0;
+		border: 1px solid $select_border;
+		box-sizing: border-box;
+		border-radius: 2px;
+		&:hover {
+			background-color: $basic-green;
+		}
+	}
+	.room{
+		margin-bottom:30px;
+	}
+
+	.checkbox {
+		cursor:pointer;
+		display: inline-block;
+		line-height: 43px;
+		margin-right: 20px;
+		input {
+			display: none;
+			& + span:before {
+				content: " ";
+				height: 40px;
+				width: 40px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				float: left;
+				background-color: $bgelements;
+				border: 2px solid #fff;
+				border-radius: 50%;
+				margin-right: -26px;
+			}
+			&:checked + span {
+				content: " ";
+				color: $bgelements;
+			}
+			&:checked + span:before {
+				content: " ";
+				background-color: $basic-green;
+			}
+		}
+	}
+	::-webkit-input-placeholder{
+		font-size:12px;
+		color:#5A6872;
+	}
+	.inp-info{
+		height: 40px;
+		width: 100%;
+		border: 2px solid #DFE3E6;
+		padding-left:10px;
+	}
+	.req-form-submit{
+		width:100%;
+		margin-top:40px;
+		margin-bottom: 15px;
+		border:none;
+	}
+}

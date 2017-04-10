@@ -1,0 +1,83 @@
+
+.metrovka-blog{	
+	@extend .base-element;
+	background-color: $bgelements;
+	font-size:14px;
+	font-family: 'Roboto', sans-serif;
+	padding-top:20px;
+	margin-top:55px;
+	.text-wrapper{
+		@media #{$phone}{
+			width:90%}
+		@media #{$pc}{
+			width:50%
+		}
+		margin: 0 auto;
+		text-align: center;
+		h2{
+			@include mfont(24px,1.33);
+		}
+		p{
+			margin-top: 20px;
+			line-height: 1.428;
+		}
+	}
+	.images{
+		display: flex;
+		@media #{$phone}{
+			flex-direction:column;
+			align-items: center;
+		}
+		justify-content: space-around;
+		margin-top: 20px;
+		.descr-text{
+			margin-top: 20px;
+		}
+		.category{
+			@include mfont(11px,1.45);
+		}
+		.fiolet-c{
+			color: #BA8FF7;
+		}
+		.blue-c{
+			color:#2573D8;
+		}
+		.green-c{
+			color:$basic-green;
+		}
+		h3{
+			@include mfont(16px,1.5);
+			color: $txt-black;
+			margin-top: 5px;
+		}
+		p{
+			@include mfont(12px,1.33);
+			color:#8C9BA5;
+			margin-top: 20px;
+			@media #{$phone}{
+				margin-bottom:30px;
+			}
+		}
+		.blog-element{
+			@media #{$pc}{
+			width: 30.5%;
+		}
+			@media #{$phone}{
+				width: 90%;
+			}
+		}
+		img{
+			width:100%;
+		}
+	}
+	.blog-link{
+		text-align : center;
+		margin-top: 39px;
+		padding:10px;
+		height:40px;		
+		width:100%;
+		background: url(../img/blog-line.png) repeat-x 0 0;
+		a{@include mfont(16px,1.5);
+			color: $txt-black;}
+		}	
+	}

@@ -1,0 +1,135 @@
+.telegram{
+	@extend .base-element;
+	padding-top: 61px;
+	text-align: center;
+	font-size: 14px;
+	font-family: 'Roboto', sans-serif;
+	.text-wrapper{
+		@media #{$phone}{
+			width:80%;}
+		@media #{$pc}{
+			max-width: 56%;
+		}
+		margin: 0 auto;
+		h2{	
+			@include mfont(24px,1.33);
+		}
+		p{
+			margin-top:20px;	
+			line-height: 1.42;
+		}
+	}
+	.slider{
+		margin-top: 22px;
+		input{display:none;}
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		.slides{
+			margin-top: 40px;
+			width:100%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;			
+		}
+		
+	}
+	.telegram-photo{
+		@media #{$phone}{
+			display:none;}
+		width: 31.685%;
+		img{width:100%;}
+	}
+
+	.telegram-window{
+		background-color: $bgelements;
+		text-align: left;
+		@media #{$phone}{
+			padding-left: 20px;
+			padding-top: 30px;
+			display:flex;
+			width:100%;
+			flex-direction:column;
+			align-items: center;}
+		@media #{$pc}{
+			padding-left: 42px;
+			padding-top: 53px;			
+			width: 49%;}		
+		.title{
+			display: flex;
+			align-items: center;
+		}
+		img{
+			height: 62px;
+			width: 62px;
+		}
+		h4{
+			font: 24px/1.33 'Open Sans', sans-serif;
+			color: $txt-black;
+			margin-left:10px;
+			display:block;
+		}
+		h3{
+			margin-top: 15px;
+			margin-bottom: 10px;
+			@media #{$pc}{
+				@include mfont(24px,1.33);
+			}
+			@media #{$phone}{
+				@include mfont(20px,1.6);
+			}
+		}
+		ol{
+			display:block;
+			width: 80%;
+			line-height:1.428;
+			margin-top: 15px;
+			margin-left: 15px;
+			li{
+				margin-bottom:12px;
+			}
+		}
+		.tel-button{
+			@media #{$pc}{width: 320px;}
+			@media #{$phone}{width: 80%;}
+			height: 40px;
+			margin-bottom: 50px;
+			line-height: 1.28;
+		}
+	}
+	.wrapper-slider-buttons{
+		@media #{$pc}{
+		width: 44%;}
+		@media #{$phone}{
+			width:100%;
+		}
+		display: flex;
+		justify-content: space-around;
+	}
+	.point-controls{
+		margin-top:35px;
+	}
+	label{
+		cursor: pointer;
+	}
+	label.slider-buttons{
+		display: block;
+		line-height: 1.22;
+		height: 27px;
+	}
+	label.slider-points {
+		height: 16px;
+		width: 16px;
+		display: inline-block;
+		background: url(../img/point-classic.png) no-repeat;
+	}
+	#telegram-radio-1:checked ~ .point-controls label:nth-of-type(1),
+	#telegram-radio-2:checked ~ .point-controls label:nth-of-type(2){
+		background: url(../img/point-checked.png) no-repeat;
+	}
+	#telegram-radio-1:checked ~ .wrapper-slider-buttons label:nth-of-type(1),
+	#telegram-radio-2:checked ~ .wrapper-slider-buttons label:nth-of-type(2){
+		background: url(../img/selected-btn-back.jpg) repeat-x 0 100%;
+	}
+}

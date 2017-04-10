@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
+.base-element{
+	@media #{$pc}{
+		width: 78.8%;
+	}
+	@media#{$phone}{
+		width:100%;
+	}
+	margin: 0 auto;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	cursor:pointer;
+}
+body{
+	background-color: $bgcolor;
+}
+
+//classic-button
+.primary-button{
+	display: block;
+	cursor:pointer;
+	background: $basic-green;
+	text-align: center;
+	padding: 10px;
+	border-radius: 3px;
+	color: white;
+	&:hover{
+		background: $btn-hover;
+	}
+}
+
+.radio-points{
+
+}
