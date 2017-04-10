@@ -18,14 +18,14 @@ var path = {
         html:'src/*.html',
         js: 'src/js/main.js',
         libsJs: 'src/js/libs/**/*.js',
-        style: 'src/style/*.scss',
+        style: 'src/style/main.sass',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
     watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
-        style: 'src/style/**/*.scss',
+        style: 'src/style/**/*.*',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },

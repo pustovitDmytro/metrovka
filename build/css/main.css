@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto");
+body {
+  background-color: rgba(90, 104, 114, 0.08);
+  color: #152935;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px; }
+
+a {
+  text-decoration: none;
+  cursor: pointer; }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+.wrap {
+  margin: 0 auto; }
+  @media screen and (min-device-width: 890px) {
+    .wrap {
+      width: 78.8%; } }
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 890px) {
+  .wrap {
+    width: 100%; } }
+
+.button, .button_second {
+  text-align: center;
+  color: #fff;
+  background-color: #30AE63;
+  height: 40px;
+  border-radius: 2px; }
+  .button:hover, .button_second:hover {
+    background-color: #50DB88; }
+  .button:disabled, .button_second:disabled {
+    background-color: #ACDFC1; }
+
+.button_second {
+  border-radius: none; }
+
+.checkbox {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 43px;
+  margin-right: 20px; }
+  .checkbox input {
+    display: none; }
+    .checkbox input + span:before {
+      content: " ";
+      height: 40px;
+      width: 40px;
+      float: left;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      margin-right: -26px; }
+    .checkbox input:checked + span {
+      content: " "; }
+    .checkbox input:checked + span:before {
+      content: " "; }
+
+.radio {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center; }
+  .radio input {
+    display: none; }
+    .radio input + span:before {
+      content: " ";
+      font-size: 14px;
+      height: 28px;
+      width: 72px;
+      float: left;
+      background-color: #fff;
+      border-bottom: 2px solid #fff;
+      -webkit-transition: 1s;
+      transition: 1s;
+      margin-right: -70px; }
+    .radio input:checked + span {
+      content: " ";
+      -webkit-transition: .3s;
+      transition: .3s;
+      padding-bottom: 10px;
+      background-color: #ffffff;
+      border-bottom: 2px solid #30AE63; }

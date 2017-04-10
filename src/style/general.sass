@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans%7CRoboto')
+$dark-green: #30AE63
+$main-bg: rgba(90, 104, 114, .08)
+$white-color: #fff
+$light-green: #50DB88
+$text-black: #152935
+$transp-white: rgba(255, 255, 255, .1)
+$select_border: #EBEDEF
+$disable-button: #ACDFC1
+$phone: "only screen and (min-device-width: 360px) and (max-device-width: 890px)"
+$pc: "screen and (min-device-width: 890px)"
+
+body 
+  background-color: $main-bg
+  color: $text-black
+  font-family: 'Roboto', sans-serif
+  font-size: 14px
+
+a
+  text-decoration: none
+  cursor: pointer
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+li
+  list-style: none
+
+.wrap
+  margin: 0 auto
+  @media #{$pc}
+    width: 78.8%
+  @media#{$phone}
+    width: 100%
+
+
+.button
+  text-align: center
+  color: $white-color
+  background-color: $dark-green
+  height: 40px
+  border-radius: 2px
+  &:hover
+    background-color: $light-green
+  &:disabled
+    background-color: $disable-button
+
+.button_second
+  @extend .button
+  border-radius: none
+
+.checkbox
+  cursor: pointer
+  display: inline-block
+  line-height: 43px
+  margin-right: 20px
+  input 
+    display: none  
+    & + span:before 
+      content: " "
+      height: 40px
+      width: 40px			
+      float: left
+      // background-color: 
+      border: 2px solid #fff
+      border-radius: 50%
+      margin-right: -26px
+    &:checked + span 
+      content: " "
+      // color: $main-color
+    &:checked + span:before 
+      content: " "
+      // background-color: #fff
+
+.radio
+  cursor: pointer
+  display: inline-block
+  // height: 30px
+  // width: 70px
+  // line-height: 30px
+  // margin-right: 10px
+  // margin-bottom: 15px
+  text-align: center
+  input 
+    display: none
+    & + span:before 
+      content: " "
+      font-size: 14px
+      height: 28px
+      width: 72px			
+      // display: flex
+      // align-items: center
+      // justify-content: center
+      float: left
+      background-color: #fff  
+      border-bottom: 2px solid #fff
+      transition: 1s
+      margin-right: -70px
+    &:checked + span 
+      content: " "
+      transition: .3s
+      padding-bottom: 10px
+      background-color: #ffffff
+      border-bottom: 2px solid #30AE63
+
+
