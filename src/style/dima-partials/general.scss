@@ -1,43 +1,31 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
-.base-element{
-	@media #{$pc}{
-		width: 78.8%;
-	}
-	@media#{$phone}{
-		width:100%;
-	}
-	margin: 0 auto;
+.element-header{
+	@include mfont(24px,1.33);
 }
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+.hidden{
+	display: none;
 }
-ul{
-	list-style: none;
-}
-a{
-	text-decoration: none;
-	cursor:pointer;
-}
-body{
-	background-color: $bgcolor;
+label{
+	cursor: pointer;
 }
 
-//classic-button
-.primary-button{
+.radio-button{
 	display: block;
-	cursor:pointer;
-	background: $basic-green;
-	text-align: center;
-	padding: 10px;
-	border-radius: 3px;
-	color: white;
-	&:hover{
-		background: $btn-hover;
-	}
+	line-height: 1.22;
+	height: 27px;
 }
-
-.radio-points{
-
+.radio-element:checked + .radio-button{
+	background: url(../img/selected-btn-back.jpg) repeat-x 0 100%;
+}
+.radio-point_green{
+	height: 16px;
+	width: 16px;
+	display: block;
+	background: url(../img/point-classic.png) no-repeat;
+}
+.radio-element:checked + .radio-point_green{
+	background: url(../img/point-checked.png) no-repeat;
+}
+.button{
+	display: block;
+	padding: 10px;
 }

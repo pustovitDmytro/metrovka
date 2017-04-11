@@ -58,10 +58,10 @@ gulp.task('img', function () {
 });
 
 gulp.task('watch',function(){
-    gulp.watch(path.src.style,['sass']);
-    gulp.watch(path.src.js,['js']);
-    gulp.watch(path.src.html,['html']);
-    gulp.watch(path.src.img,['image']);
+    gulp.watch(path.watch.style,['sass']);
+    gulp.watch(path.watch.js,['js']);
+    gulp.watch(path.watch.html,['html']);
+    gulp.watch(path.watch.img,['image']);
 });
 
 gulp.task('build', ['img', 'sass', 'js', 'html']);
