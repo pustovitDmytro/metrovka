@@ -17,14 +17,14 @@ a {
 li {
   list-style: none; }
 
-.wrap, .telegram {
+.wrap, .telegram, .metrovka-blog, .page-footer {
   margin: 0 auto; }
   @media screen and (min-device-width: 890px) {
-    .wrap, .telegram {
+    .wrap, .telegram, .metrovka-blog, .page-footer {
       width: 78.8%; } }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 890px) {
-  .wrap, .telegram {
+  .wrap, .telegram, .metrovka-blog, .page-footer {
     width: 100%; } }
 
 .button, .button_second {
@@ -86,15 +86,14 @@ li {
       background-color: #ffffff;
       border-bottom: 2px solid #30AE63; }
 
-.element-header {
-  font-size: 24px;
-  line-height: 1.33; }
-
 .hidden {
   display: none; }
 
 label {
   cursor: pointer; }
+
+a {
+  color: #152935; }
 
 .radio-button {
   display: block;
@@ -117,21 +116,24 @@ label {
   display: block;
   padding: 10px; }
 
-.telegram {
-  padding-top: 61px;
-  text-align: center; }
-
-.telegram__text-wrapper {
+.text-wrapper {
+  text-align: center;
   margin: 0 auto; }
   @media only screen and (min-device-width: 360px) and (max-device-width: 890px) {
-    .telegram__text-wrapper {
+    .text-wrapper {
       width: 80%; } }
   @media screen and (min-device-width: 890px) {
-    .telegram__text-wrapper {
-      max-width: 56%; } }
-  .telegram__text-wrapper .description-text {
+    .text-wrapper {
+      max-width: 53%; } }
+  .text-wrapper .description-text {
     margin-top: 20px;
     line-height: 1.42; }
+  .text-wrapper .element-header {
+    font-size: 24px;
+    line-height: 1.33; }
+
+.telegram {
+  padding-top: 61px; }
 
 .telegram__slider {
   margin-top: 22px;
@@ -228,7 +230,6 @@ label {
           align-items: center; }
   .telegram-window__header .telegram-title {
     font: 24px/1.33 'Open Sans', sans-serif;
-    color: #152935;
     margin-left: 10px;
     display: block; }
 
@@ -268,3 +269,174 @@ label {
   @media only screen and (min-device-width: 360px) and (max-device-width: 890px) {
     .telegram-window__button {
       width: 80%; } }
+
+.metrovka-blog {
+  background-color: #fff;
+  padding-top: 20px;
+  margin-top: 60px; }
+
+.metrovka__images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 20px; }
+  @media only screen and (min-device-width: 360px) and (max-device-width: 890px) {
+    .metrovka__images {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+
+@media screen and (min-device-width: 890px) {
+  .blog-element {
+    width: 30.5%; } }
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 890px) {
+  .blog-element {
+    width: 90%; } }
+
+.blog-element__text {
+  margin-top: 20px; }
+  .blog-element__text .main-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 5px; }
+  .blog-element__text .addition-text {
+    font-size: 12px;
+    line-height: 1.33;
+    color: #8C9BA5;
+    margin-top: 20px; }
+    @media only screen and (min-device-width: 360px) and (max-device-width: 890px) {
+      .blog-element__text .addition-text {
+        margin-bottom: 30px; } }
+
+.blog-element__category {
+  font-size: 11px;
+  line-height: 1.45; }
+
+.blog-element__category_fiolet {
+  color: #BA8FF7; }
+
+.blog-element__category_blue {
+  color: #2573D8; }
+
+.blog-element__category_green {
+  color: #30AE63; }
+
+.blog-element__picture {
+  width: 100%; }
+
+.metrovka__link {
+  text-align: center;
+  margin-top: 39px;
+  padding: 10px;
+  height: 40px;
+  width: 100%;
+  background: url(../img/blog-line.png) repeat-x 0 0; }
+  .metrovka__link a {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #152935; }
+
+.page-footer {
+  padding-top: 45px; }
+
+.footer__nav-menus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+  line-height: 1.53; }
+  @media screen and (min-device-width: 890px) {
+    .footer__nav-menus {
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      -webkit-box-align: stretch;
+          -ms-flex-align: stretch;
+              align-items: stretch; } }
+  @media only screen and (min-device-width: 360px) and (max-device-width: 890px) {
+    .footer__nav-menus {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+
+@media screen and (min-device-width: 890px) {
+  .footer__menu {
+    width: 18%; } }
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 890px) {
+  .footer__menu {
+    width: 90%;
+    text-align: center; } }
+
+.menu-title {
+  font-size: 16px;
+  line-height: 2; }
+
+.nav-container {
+  margin-top: 13px; }
+  .nav-container .list-item {
+    margin-bottom: 17px; }
+
+.page-footer .contacts .web-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 13px; }
+  @media only screen and (min-device-width: 360px) and (max-device-width: 890px) {
+    .page-footer .contacts .web-icons {
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  .page-footer .contacts .web-icons .ico {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../img/sprite.png) no-repeat 0 0; }
+  .page-footer .contacts .web-icons .ico_vk {
+    background-position: -34px 0;
+    width: 20px;
+    margin-left: 17px;
+    margin-right: 17px; }
+  .page-footer .contacts .web-icons .ico_ins {
+    background-position: -70px 0; }
+
+.page-footer .contacts .contacts__adrr {
+  font-size: 13px;
+  line-height: 1.538;
+  margin-bottom: 5px; }
+
+.page-footer .contacts .contacts__town {
+  font-size: 11px;
+  line-height: 1.82;
+  margin-bottom: 15px; }
+
+.page-footer .contacts .contacts__mail {
+  font-size: 13px;
+  line-height: 1.538; }
+
+.contacts__button {
+  width: 80%;
+  height: 40px; }
+  @media only screen and (min-device-width: 360px) and (max-device-width: 890px) {
+    .contacts__button {
+      display: block;
+      margin: 0 auto; } }
+
+.footer__logo {
+  width: 100%;
+  height: 100px;
+  display: block;
+  background: url(../img/footer-logo.png) no-repeat 50% 80%; }

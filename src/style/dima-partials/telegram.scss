@@ -1,20 +1,6 @@
 .telegram{
 	@extend .wrap;
 	padding-top: 61px;
-	text-align: center;
-}
-.telegram__text-wrapper{
-	@media #{$phone}{
-		width:80%;
-	}
-	@media #{$pc}{
-		max-width: 56%;
-	}
-	margin: 0 auto;
-	.description-text{
-		margin-top:20px;	
-		line-height: 1.42;
-	}
 }
 .telegram__slider{
 	margin-top: 22px;
@@ -27,8 +13,8 @@
 	margin-top: 40px;
 	width:100%;
 	@media #{$pc}{
-	margin-left: 84px;
-}
+		margin-left: 84px;
+	}
 	display: flex;
 	justify-content: space-around;
 	align-items: center;			
@@ -80,7 +66,6 @@
 	align-items: center;
 	.telegram-title{
 		font: 24px/1.33 'Open Sans', sans-serif;
-		color: $text-black;
 		margin-left:10px;
 		display:block;
 	}
@@ -118,6 +103,6 @@
 		width: 80%;
 	}
 	margin-top: 40px;
-    margin-bottom: 40px;
+	margin-bottom: 40px;
 	line-height: 1.28;
 }

@@ -1,13 +1,12 @@
-.element-header{
-	@include mfont(24px,1.33);
-}
 .hidden{
 	display: none;
 }
 label{
 	cursor: pointer;
 }
-
+a{
+	color: $text-black;
+}
 .radio-button{
 	display: block;
 	line-height: 1.22;
@@ -28,4 +27,21 @@ label{
 .button{
 	display: block;
 	padding: 10px;
+}
+.text-wrapper{
+	text-align: center;
+	@media #{$phone}{
+		width:80%;
+	}
+	@media #{$pc}{
+		 max-width: 53%;
+	}
+	margin: 0 auto;
+	.description-text{
+		margin-top:20px;	
+		line-height: 1.42;
+	}
+	.element-header{
+		@include mfont(24px,1.33);
+	}
 }
