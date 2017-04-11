@@ -1,9 +1,7 @@
 
 @import "dima-partials/variables.scss";
-@import "dima-partials/mixins.scss";
+
 @import "dima-partials/general.scss";
-
-
 
 @import "dima-partials/telegram.scss";
 
@@ -11,4 +9,4 @@
 
 @import "dima-partials/footer.scss";
 
-//@import "dima-partials/request.scss";
+@import "dima-partials/request.scss";

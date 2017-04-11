@@ -98,7 +98,8 @@ a {
 .radio-button {
   display: block;
   line-height: 1.22;
-  height: 27px; }
+  height: 27px;
+  text-align: center; }
 
 .radio-element:checked + .radio-button {
   background: url(../img/selected-btn-back.jpg) repeat-x 0 100%; }
@@ -116,6 +117,10 @@ a {
   display: block;
   padding: 10px; }
 
+.element-header {
+  font-size: 24px;
+  line-height: 1.33; }
+
 .text-wrapper {
   text-align: center;
   margin: 0 auto; }
@@ -128,9 +133,6 @@ a {
   .text-wrapper .description-text {
     margin-top: 20px;
     line-height: 1.42; }
-  .text-wrapper .element-header {
-    font-size: 24px;
-    line-height: 1.33; }
 
 .telegram {
   padding-top: 61px; }
@@ -440,3 +442,76 @@ a {
   height: 100px;
   display: block;
   background: url(../img/footer-logo.png) no-repeat 50% 80%; }
+
+.request-section {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  min-height: 484px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.request__left-text {
+  width: 400px;
+  background-color: #F5F7FA;
+  padding-top: 45px;
+  padding-left: 40px; }
+  .request__left-text .description-text {
+    margin-top: 27px;
+    width: 275px; }
+
+.request__form {
+  width: 400px;
+  padding: 42px 40px; }
+  .request__form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%; }
+  .request__form .radio-labels {
+    width: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    .request__form .radio-labels .radio-button {
+      width: 65px; }
+  .request__form ::-webkit-input-placeholder {
+    font-size: 12px;
+    color: #5A6872; }
+  .request__form .checkbox input + span:before {
+    background-color: #fff;
+    border: 2px solid #DFE3E6;
+    border-radius: 50%; }
+  .request__form .checkbox input:checked + span {
+    color: #fff; }
+  .request__form .checkbox input:checked + span:before {
+    background-color: #30AE63; }
+
+.request-form__room {
+  margin-bottom: 30px; }
+
+.request-form__inp {
+  height: 40px;
+  width: 100%; }
+
+.request-form__inp-info {
+  border: 2px solid #DFE3E6;
+  padding-left: 10px; }
+
+.request-form__submit {
+  margin-bottom: 15px;
+  border: none; }
