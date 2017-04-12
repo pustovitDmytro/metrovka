@@ -1,0 +1,209 @@
+.header
+  background-color: #2FAD64
+  width: 100%
+  color: $white-color
+.nav
+  display: flex
+  justify-content: space-between
+.nav_block
+  display: flex
+  flex-wrap: no-wrap
+.nav_logo
+  display: block
+  padding: 20px 0 0 0
+  margin-right: 40px
+.menu
+  margin-top: 12px
+.menu_item
+  display: inline-block
+  list-style: none
+
+.menu_item_a 
+  display: block
+  padding: 15px 5px 10px
+  margin-right: 30px
+  color: $white-color
+  &:hover
+    border-bottom: 2px solid $white-color
+  &:active, &.active
+    border-bottom: 2px solid $white-color
+.menu_item_img
+  padding: 3px 9px 3px 3px
+
+.block_button
+  margin-top: 17px
+  display: flex
+  flex-wrap: no-wrap
+.add_button
+  @extend .button
+  background-color: $transp-white
+  padding: 10px 30px 10px 5px
+  line-height: 17px
+.add_button_img
+  padding: 0 10px
+.singin
+  @extend .menu_item_a
+  margin-right: 0
+  margin-left: 15px
+.h1
+  font-size: 32px
+  margin-top: 63px
+  font-weight: normal
+// Первая форма поиска по Украине и количеству комнат
+.choice
+  display: flex
+  flex-wrap: no-wrap
+  padding-top: 20px
+  justify-content: space-between
+  height: 122px
+.city
+  width: 340px
+.room_block
+  margin: 8px 0
+.room_label
+  margin-bottom: 20px
+  display:inline-block  
+.checkbox
+  line-height: 43px
+  margin-right: 20px
+  input 
+    display: none  
+    & + span:before 
+      content: " "
+      background-color: #2FAD64
+      border: 2px solid $white-color
+    &:checked + span 
+      content: " "
+      color: $text-black
+    &:checked + span:before 
+      content: " "
+      background-color: $white-color
+.choice_button
+  background-color: $white-color
+  padding: 10px 40px
+  color: $dark-green
+  height: 40px
+  border: 2px solid $dark-green
+  margin-top: 25px
+  transition: .5s
+  &:hover
+    background-color: $dark-green
+    padding: 10px 40px
+    color: $white-color
+    border: 2px solid $white-color
+    transition: .5s
+
+
+
+// METRO    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.metro
+  @extend .wrap
+  margin-top: 20px
+  padding: 43px 40px 35px 40px
+  background-color: $white-color
+  display: flex
+  justify-content: space-between
+
+.h2
+  color: $dark-green
+  padding-bottom: 18px
+  font-size: 24px
+  font-weight: normal
+
+// Поиск типа обьекта Квартиры-Дома-Офисы
+.type-choice
+  // margin: 10px 0
+ 
+.radio
+  height: 30px
+  width: 70px
+  line-height: 30px
+  margin-right: 10px
+  margin-bottom: 15px
+.metro-image_item
+  width: 100%
+.metro-choice_button
+  @extend .button
+  width: 320px
+  margin-top: 10px
+  border: none
+
+// Best offer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+.bestoffer
+  @extend .wrap
+  margin-top: 20px
+  background-color: $white-color
+  
+.h3
+  text-align: center
+  font-size: 24px
+  font-weight: normal
+  color: $text-black
+  margin-bottom: 28px
+  padding-top: 23px
+  width: 100%
+
+.offer_block
+  display: flex
+  flex-wrap:wrap
+  margin: 25px
+  margin-bottom: 40px
+.offer_item
+  width: 25%;
+  margin-right: 12px
+.offer_item_img
+  width: 100%;
+  position: relative
+  margin-bottom: 15px
+.img_offer 
+  width: 100%
+.offer_setting
+  position: absolute
+  top: 12px
+  right: 10px
+.offer_price
+  font-size: 16px
+  padding-bottom: 10px
+.offer_price_img
+  padding-left: 20px
+.offer_properties
+  font-size: 12px 
+  color: #8C9BA5
+  padding-bottom: 17px
+.metro-properties
+  font-size: 12px
+.metro-properties_img
+  padding-right: 10px
+.offer_lookat
+  display: block
+  width: 100%
+  border-top: 2px solid #F0F3F6
+  height: 40px
+  text-align: center
+  padding-top: 10px
+  font-size: 16px
+  &:hover
+  color: $text-black
+  &:focus
+  color: $text-black
+  &:active
+  color: $text-black
+
+
+// lastoffer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.lastoffer
+  @extend .wrap
+  margin-top: 20px
+  background-color: $white-color
+  text-align: center
+.offer_block
+  margin-top: 10px
+  text-align: left
+
+.h3_last
+  margin-bottom: 19px
+.last_offer_block
+  margin-top: 15px
+  margin-bottom: 47px

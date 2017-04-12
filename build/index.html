@@ -4,12 +4,203 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metrovka</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+   
   
   	<link rel="stylesheet" href="css/libs.min.css">
+    
+    
 	<link rel="stylesheet" href="css/main.css">  
   </head>
   <body>
-  	
+  	<section class="header">
+  		 <div class="wrap">
+  			<nav class="nav">
+  				<div class="nav_block">
+  				<a href="#" class="nav_logo"><img src="img/logo.png" alt="logo"></a>
+  				<ul class="menu">
+  					<li class="menu_item"><a class="menu_item_a active" href="#">Аренда</a></li>
+  					<li class="menu_item"><a class="menu_item_a" href="#">Продажа</a></li>
+  					<li class="menu_item"><a class="menu_item_a" href="#">Посуточно</a></li>
+  					<li class="menu_item"><a class="menu_item_a" href="#"><img class="menu_item_img" src="img/Settings.png" alt="Settings"> Еще</a></li>
+  				</ul>
+  				</div>
+  				<div class="block_button">
+  				<a class="add_button" href="#"><img class="add_button_img" src="img/Shape.png" alt="plus"> Разместить обьявление</a>
+  				<a class="singin"  href="#">Войти</a>
+  				</div>
+  			</nav>
+  			<h1 class="h1">Поиск недвижимости в Украине</h1>
+  			<form action="#" method="get" id="search_ukraine">
+  			<div class="choice">			
+  				<div class="city">			  
+  					<label for="city">Выберите город</label>
+  					    <select id="city" name="city">
+  					      <option class="select_option" value="Киев">Киев</option>
+  					      <option class="select_option" value="Львов">Львов</option>
+  					      <option class="select_option" value="Одесса">Одесса</option>
+  					      <option class="select_option" value="Днепр">Днепр</option>
+  					      <option class="select_option" value="Харьков">Харьков</option>
+  					      <option class="select_option" value="Чернигов">Чернигов</option>
+  					    </select>
+  				</div>
+  	<!-- choice_room -->
+  				<div class="room">
+  					<label class="room_label" for="room">Кол-во комнат</label>
+  					<div class="room_block">
+  						<label class="checkbox"><input type="checkbox" checked="checked">
+  						<span>1</span>
+  						</label>
+  						<label class="checkbox"><input type="checkbox"  checked="checked">
+  						<span>2</span>
+  						</label>
+  						<label class="checkbox"><input type="checkbox" >
+  						<span>3</span>
+  						</label>
+  						<label class="checkbox"><input type="checkbox" >
+  						<span>4</span>
+  						</label>
+  						<label class="checkbox"><input type="checkbox" >
+  						<span>5+</span>
+  						</label>
+  					</div> 			
+  				</div>
+  				<button class="choice_button" type="submit">Перейти к поиску</button>
+  			</div>
+  	 </form>
+  	 </div>	
+  		</section>
+      <section class="metro">
+      <div class="metro_info">
+      	<h2 class="h2">Недвижимость возле метро</h2>
+      	<form action="#" method="get" id="search_kiev">
+    		<div class="metro-choice">
+    <!-- Выбор типа -->
+    			<div class="type-choice">
+    				<label class="radio"><input type="radio" name="type-choice" value="flat" checked="checked">
+    				<span>Квартиры</span>
+    					</label>
+    				<label class="radio"><input type="radio"  name="type-choice" value="house">
+    				<span>Дома</span>
+    				</label>
+    				<label class="radio"><input type="radio" name="type-choice" value="offics">
+    				<span>Офисы</span>
+    				</label>				
+    			</div>
+    <!-- Выбор метро -->
+    			<div class="metro-block">
+    			  	    <select id="metro" name="city">
+    				      <option class="select_option" value="Политехнический"><img src="img/red.jpg" alt="red">Политехнический</option>
+    				      <option class="select_option" value="Театральная"><img src="img/red.jpg" alt="red">Театральная</option>
+    				      <option class="select_option" value="Университет"><span class="metro-bull"></span>Университет</option>
+    				      <option class="select_option" value="Оболонь">Оболонь</option>
+    				      <option class="select_option" value="Минская">Минская</option>
+    				    </select>
+    			</div>
+    			<button class="metro-choice_button" type="submit">Показать результаты поиска</button>
+    		</div>
+    </form>
+      </div>
+      <div class="metro-image">
+      	<img class="metro-image_item" src="img/metro.png" alt="metro">
+      </div>
+      </section>
+    <section class="bestoffer">
+      	<h3 class="h3">Лучшие предложения в Киеве</h3>
+      	<ul class="offer_block">
+      		<li class="offer_item">
+      			<div class="offer_item_img"><img class="img_offer" src="img/flat.jpg" alt="flat foto"><a class="offer_setting" href="#"><img src="img/SettingV.png" alt="setting vertical"></a></div>
+      			<div class="offer_item_info">
+      				<p class="offer_price">7 800 грн <img  class="offer_price_img" src="img/ok.png" alt="ok"></p>
+      				<p class="offer_properties">2 комн. 30 кв.м</p>
+      				<p class="metro-properties"><img class="metro-properties_img" src="img/red.jpg" alt="red">Политехнический институт</p>
+      			</div>
+      		</li>
+      		<li class="offer_item">
+      			<div class="offer_item_img"><img class="img_offer" src="img/flat.jpg" alt="flat foto"><a class="offer_setting" href="#"><img src="img/SettingV.png" alt="setting vertical"></a></div>
+      			<div class="offer_item_info">
+      				<p class="offer_price">10 200 грн <img class="offer_price_img" src="img/ok.png" alt="ok"></p>
+      				<p class="offer_properties">1 комн. 30 кв.м</p>
+      				<p class="metro-properties"><img class="metro-properties_img" src="img/red.jpg" alt="red">Политехнический институт</p>
+      			</div>
+      		</li>
+      		<li class="offer_item">
+      			<div class="offer_item_img"><img class="img_offer" src="img/flat.jpg" alt="flat foto"><a class="offer_setting" href="#"><img src="img/SettingV.png" alt="setting vertical"></a></div>
+      			<div class="offer_item_info">
+      				<p class="offer_price">6 900 грн <img  class="offer_price_img" src="img/ok.png" alt="ok"></p>
+      				<p class="offer_properties">2 комн. 30 кв.м</p>
+      				<p class="metro-properties"><img class="metro-properties_img" src="img/red.jpg" alt="red">Политехнический институт</p>
+      			</div>
+      		</li>
+      		<li class="offer_item">
+      			<div class="offer_item_img"><img class="img_offer" src="img/flat.jpg" alt="flat foto"><a class="offer_setting" href="#"><img src="img/SettingV.png" alt="setting vertical"></a></div>
+      			<div class="offer_item_info">
+      				<p class="offer_price">9 000 грн <img  class="offer_price_img" src="img/ok.png" alt="ok"></p>
+      				<p class="offer_properties">2 комн. 30 кв.м</p>
+      				<p class="metro-properties"><img class="metro-properties_img" src="img/red.jpg" alt="red">Политехнический институт</p>
+      			</div>
+      		</li>
+      	</ul>
+      	<a href="#" class="offer_lookat">Смотреть лучшие ценовые предложения</a>
+      </section>
+      <section class="lastoffer">
+        <h3 class="h3 h3_last">Последние обьявления в Киеве</h3>
+        <!-- Выбор типа -->
+    			<div class="type-choice">
+    				<label class="radio"><input type="radio" name="type-choice" value="flat" checked="checked">
+    				<span>Квартиры</span>
+    					</label>
+    				<label class="radio"><input type="radio"  name="type-choice" value="house">
+    				<span>Дома</span>
+    				</label>
+    				<label class="radio"><input type="radio" name="type-choice" value="offics">
+    				<span>Офисы</span>
+    				</label>				
+    			</div>
+      	<ul class="offer_block last_offer_block">
+      		<li class="offer_item">
+      			<div class="offer_item_img"><img class="img_offer" src="img/flat1.jpg" alt="flat foto"><a class="offer_setting" href="#"><img src="img/SettingV.png" alt="setting vertical"></a></div>
+      			<div class="offer_item_info">
+      				<p class="offer_price">11 800 грн <img class="offer_price_img" src="img/ok.png" alt="ok"></p>
+      				<p class="offer_properties">2 комн. 48 кв.м</p>
+      				<p class="metro-properties"><img class="metro-properties_img" src="img/red.jpg" alt="red">Политехнический институт</p>
+      			</div>
+      		</li>
+      		<li class="offer_item">
+      			<div class="offer_item_img"><img class="img_offer" src="img/flat2.jpg" alt="flat foto"><a class="offer_setting" href="#"><img src="img/SettingV.png" alt="setting vertical"></a></div>
+      			<div class="offer_item_info">
+      				<p class="offer_price">15 000 грн <img class="offer_price_img" src="img/ok.png" alt="ok"></p>
+      				<p class="offer_properties">3 комн. 100 кв.м</p>
+      				<p class="metro-properties"><img class="metro-properties_img" src="img/red.jpg" alt="red">Шулявская</p>
+      			</div>
+      		</li>
+      		<li class="offer_item">
+      			<div class="offer_item_img"><img class="img_offer" src="img/flat3.jpg" alt="flat foto"><a class="offer_setting" href="#"><img src="img/SettingV.png" alt="setting vertical"></a></div>
+      			<div class="offer_item_info">
+      				<p class="offer_price">11 800 грн <img class="offer_price_img" src="img/ok.png" alt="ok"><img class="offer_price_img" src="img/ok.png" alt="ok"></p>
+      				<p class="offer_properties">1 комн. 30 кв.м</p>
+      				<p class="metro-properties"><img class="metro-properties_img" src="img/blue.png" alt="blue">Контрактовая прощадь</p>
+      			</div>
+      		</li>
+      		<li class="offer_item">
+      			<div class="offer_item_img"><img class="img_offer" src="img/flat.jpg" alt="flat foto"><a class="offer_setting" href="#"><img src="img/SettingV.png" alt="setting vertical"></a></div>
+      			<div class="offer_item_info">
+      				<p class="offer_price">7 000 грн <img class="offer_price_img" src="img/ok.png" alt="ok"></p>
+      				<p class="offer_properties">2 комн. 40 кв.м</p>
+      				<p class="metro-properties">просп. Победы, 18А</p>
+      			</div>
+      		</li>
+      	</ul>
+      	<a href="#" class="offer_lookat">Смотреть лучшие ценовые предложения</a>
+      </section>
+  
+  <script type="text/javascript" src="js/libs.min.js"></script> 
+  <script type="text/javascript">
+$(function() {
+
+  $('select').styler();
+
+});
+
+  </script>
   </body>
 </html>
