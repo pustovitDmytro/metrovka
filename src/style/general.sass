@@ -42,8 +42,10 @@ li
   background-color: $dark-green
   height: 40px
   border-radius: 2px
+  transition: .5s  // 
   &:hover
     background-color: $light-green
+    transition: .5s  // 
   &:disabled
     background-color: $disable-button
 
@@ -67,11 +69,14 @@ li
       border: 2px solid #fff
       border-radius: 50%
       margin-right: -26px
+      transition: .5s //
     &:checked + span 
       content: " "
+      transition: .5s //
       // color: $main-color
     &:checked + span:before 
       content: " "
+      transition: .5s //
       // background-color: #fff
 
 .radio

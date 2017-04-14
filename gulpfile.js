@@ -1,5 +1,6 @@
 'use strict';
 var gulp = require('gulp'),
+    watch = require('gulp-watch'),
     sass = require('gulp-sass'),
     rigger = require("gulp-rigger"),
     prefixer = require('gulp-autoprefixer'),
@@ -19,6 +20,7 @@ var path = {
         js: 'src/js/main.js',
         libsJs: 'src/js/libs/**/*.js',
         style: 'src/style/main.sass',
+        style: 'src/style/listing.sass',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
@@ -57,7 +59,7 @@ gulp.task('img', function () {
         .pipe(gulp.dest(path.build.img))
 });
 
-gulp.task('watch',function(){
+gulp.task('watch', function(){
     gulp.watch(path.src.style,['sass']);
     gulp.watch(path.src.js,['js']);
     gulp.watch(path.src.html,['html']);
