@@ -1,5 +1,7 @@
 .metro
   @extend .wrap
+  margin: 15px auto
+  flex-wrap: no-wrap
   margin-top: 20px
   padding: 43px 40px 35px 40px
   background-color: $white-color
@@ -30,3 +32,13 @@
 .metro-choice
   width: 100%
   max-width: 320px
+
+@media#{$phone}
+  .metro
+    width: 100%
+    flex-wrap: wrap-reverse
+    padding: 20px 15px;
+  .metro-image
+    margin: 0 auto
+  .metro_info
+    margin: 0 auto

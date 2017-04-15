@@ -20,7 +20,6 @@ var path = {
         js: 'src/js/main.js',
         libsJs: 'src/js/libs/**/*.js',
         style: 'src/style/main.sass',
-        style: 'src/style/listing.sass',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },

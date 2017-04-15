@@ -4,17 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metrovka</title>
-   
-  
+    
   	<link rel="stylesheet" href="css/libs.min.css">
-    
-    
-	<link rel="stylesheet" href="css/main.css">  
+	  <link rel="stylesheet" href="css/main.css">  
   </head>
   <body>
   	<section class="header">
   		 <div class="wrap">
-  			<nav class="nav">
+  			<nav class="nav desctop">
   				<div class="nav_block">
   				<a href="#" class="nav_logo"><img src="img/logo.png" alt="logo"></a>
   				<ul class="menu">
@@ -29,7 +26,28 @@
   				<a class="singin"  href="#">Войти</a>
   				</div>
   			</nav>
-  			<h1 class="h1">Поиск недвижимости в Украине</h1>
+  			<div class="mobmenu">
+  				<a href="#" class="nav_logo"><img src="img/logo.png" alt="logo"></a>
+  				<a class="hoover" id="hoover" href="#">Аренда</a>
+  				<div class="open">
+  	               <span onclick="openNav()">&#9776;</span>
+  	   			</div>
+  				<div id="myNav" class="overlay">
+  				<a href="#" class="nav_logo"><img src="img/logo.png" alt="logo"></a>
+  				  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776; &emsp;</a>
+  				  <ul class="overlay-content">
+  				    <li class="overlay-content_item"><a class="overlay-content_item_a active" href="#">Аренда</a>
+  				    <li class="overlay-content_item"><a class="overlay-content_item_a" href="#">&nbsp;Продажа</a></li>
+  				    <li class="overlay-content_item"><a class="overlay-content_item_a" href="#">&nbsp;Посуточно</a></li>
+  				    <li class="overlay-content_item"><a class="overlay-content_item_a" href="#">Блог</a></li>
+  				    <li class="overlay-content_item"><a class="overlay-content_item_a" href="#">Контакты</a></li>
+  				    <li class="overlay-content_item"><a class="overlay-content_item_a" href="#">Новый поиск</a></li>
+  				    <a class="add_button" href="#"><img class="add_button_img" src="img/Shape.png" alt="plus"> Разместить обьявление</a></li>
+  				    <li class="overlay-content_item"><a class="overlay-content_item_a" href="#">Войти</a></li>
+  				  </ul>
+  				</div>
+  			</div>
+  			<div class="header_title"><h1 class="h1">Поиск недвижимости в Украине</h1></div>
   			<form action="#" method="get" id="search_ukraine">
   			<div class="choice">			
   				<div class="city">			  
@@ -193,14 +211,24 @@
       	<a href="#" class="offer_lookat">Смотреть лучшие ценовые предложения</a>
       </section>
   
-  <script type="text/javascript" src="js/libs.min.js"></script> 
-  <script type="text/javascript">
-$(function() {
+    <script type="text/javascript" src="js/libs.min.js"></script> 
+    <script type="text/javascript">
+      $(function() {
 
-  $('select').styler();
+        $('select').styler();
 
-});
+        });
 
   </script>
+  <script>
+  function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+    document.getElementById("hoover").style.display = "none";
+  }
+
+  function closeNav() {
+    document.getElementById("myNav").style.height = "0%";document.getElementById("hoover").style.display = "block";
+  }
+</script>
   </body>
 </html>

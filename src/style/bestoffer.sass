@@ -18,9 +18,11 @@
   margin: 25px
   margin-bottom: 40px
 .offer_item
-  width: 25%;
+  width: 25%
+  min-width: 200px
   margin-right: 12px
   transition: 0.5s
+  display: inline-block
   &:hover
     transform: translateY(-5px);
     transition: 0.5s
@@ -66,3 +68,7 @@
   &:active
     color: $dark-green - #222
     transition: .5s
+@media#{$phone}
+  .offer_block
+    overflow-x: scroll
+    
