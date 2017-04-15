@@ -1,0 +1,139 @@
+$grey-text: #8C9BA5;
+$big-pc: "screen and (min-device-width: 1280px)";
+$small-pc: "only screen and (min-device-width: 890px) and (max-device-width: 1279px)";
+
+@import "listing-result.scss";
+
+.listing{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-around;
+ &__main{
+   width:100%;
+   @media #{$big-pc}{
+     width: 920px;
+   }
+ }
+ &-section{
+  font-size: 14px;
+}
+&-wrapper{
+  @extend .wrap;
+}
+&__nav{
+ background-color: $dark-green;
+ height: 60px;	
+}
+&__header{
+ min-height: 120px;
+ padding-top: 20px;  
+ margin-bottom: 10px;
+ @media #{$phone}{
+  padding-left: 10%;
+}
+}
+&__title{  
+  margin-top: 8px;
+  @media #{$pc}{
+    @include mfont(20px, 2);
+  }
+  @media #{$phone}{
+    @include mfont(16px, 2);
+  }
+}
+&__info-edit{
+  margin-top: 15px;
+  display: flex;
+  color: $grey-text;
+  @media #{$pc}{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  @media #{$phone}{
+    flex-direction: column;
+  }
+  .info-elem{
+    @media #{$pc}{
+     width:40%;
+   }
+   @media #{$phone}{
+     width:100%;
+     margin-bottom:10px;
+   }
+ }
+ &__manipulate{
+  display: flex;
+  flex-direction: row;
+  @media #{$pc}{
+   justify-content: flex-end;
+ }
+ @media #{$phone}{
+   justify-content: flex-start;    
+
+ }
+ .sort-link{
+  margin:0;
+}
+}
+&__wrap{
+  margin-left: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.grey-link{
+  color: $grey-text;
+}
+.triangle{
+  display: block;
+  margin-left: 14px;
+  background: url(../img/triangle.png) no-repeat;
+  width: 10px;
+  height: 5px;
+}
+}
+&__info-block{
+  width: 100%;
+}
+}
+
+.map__image{
+	width: 95%;
+	display: block;
+}
+.listing__map{
+	display: none;
+	@media #{$big-pc}{
+		display: block;
+    flex: 1;
+  }
+}
+@media #{$phone}{
+  .result__wrap_phone{
+    width:90%;
+    margin: 0 auto;
+  }
+}
+.link_short{
+  @media #{$pc}{
+    display: none;
+  } 
+}
+.link__path-list{
+  @media #{$phone}{
+    display: none;
+  }
+  .list-item{
+    display: inline;
+    margin-right: 8px;
+  }
+  .list-item:after{
+    content: "/";
+    color: $link-text;
+    margin-left:10px;
+  }
+  .list-item:last-child:after{
+    display: none;
+  }
+}

@@ -1,6 +1,8 @@
 $request-left: #F5F7FA;
 $request__placeholder: #5A6872;
 $grey-border: #DFE3E6;
+$link-text: #2573D8;
+$grey-link-text: #C4C4C4;
 
 @mixin mfont($size,$line-height){
 	font-size: $size;
@@ -12,9 +14,6 @@ $grey-border: #DFE3E6;
 }
 label{
 	cursor: pointer;
-}
-a{
-	color: $text-black;
 }
 .radio-button{
 	display: block;
@@ -34,9 +33,18 @@ a{
 .radio-element:checked + .radio-point_green{
 	background: url(../img/point-checked.png) no-repeat;
 }
+.radio-point_grey{
+	height: 8px;
+	width: 8px;
+	display: block;
+	background: url(../img/grey_point.png) no-repeat;
+}
+.radio-element:checked + .radio-point_grey{
+	background: url(../img/grey_point_checked.png) no-repeat;
+}
 .button{
 	display: block;
-	padding: 10px;
+	padding: 10px 0px;
 }
 .element-header{
 	@include mfont(24px,1.33);
@@ -54,4 +62,23 @@ a{
 		margin-top:20px;	
 		line-height: 1.42;
 	}	
+}
+.color-link{
+	&:hover {
+      color: $white-color;
+    }
+}
+.blue-link{
+	@extend .color-link;
+    color: $link-text;
+}
+.grey-link{
+	@extend .color-link;
+	color: $grey-link-text;
+}
+.black-link{
+	color: $text-black;
+	&:hover {
+      color: $dark-green;
+    }
 }
