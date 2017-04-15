@@ -1,0 +1,44 @@
+.metro
+  @extend .wrap
+  margin: 15px auto
+  flex-wrap: no-wrap
+  margin-top: 20px
+  padding: 43px 40px 35px 40px
+  background-color: $white-color
+  display: flex
+  justify-content: space-between
+  &-image_item
+    width: 100%
+  &-choice_button
+    @extend .button
+    display: block
+    max-width: 320px
+    width: 100%
+    margin-top: 10px
+    cursor: pointer
+    padding-top: 11px
+.h2
+  color: $dark-green
+  padding-bottom: 18px
+  font-size: 24px
+  font-weight: normal
+ 
+.radio
+  height: 30px
+  width: 70px
+  line-height: 30px
+  margin-right: 10px
+  margin-bottom: 15px
+.metro-choice
+  width: 100%
+  max-width: 320px
+
+@media#{$phone}
+  .metro
+    width: 100%
+    flex-wrap: wrap-reverse
+    padding: 20px 15px;
+  .metro-image
+    margin: 0 auto
+  .metro_info
+    margin: 0 auto

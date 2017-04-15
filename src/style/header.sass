@@ -1,0 +1,228 @@
+.header
+  background-color: #2FAD64
+  width: 100%
+  color: $white-color
+.nav
+  display: flex
+  flex-wrap: no-wrap
+  justify-content: space-between //
+  
+  &_block
+    display: flex
+    flex-wrap: no-wrap
+  &_logo
+    display: block
+    padding: 20px 0 0 0
+    margin-right: 40px
+.menu
+  margin-top: 12px
+  &_item
+    display: inline-block
+    list-style: none
+    &_a 
+      display: block
+      padding: 15px 5px 10px
+      margin-right: 30px
+      color: $white-color
+      border-bottom: 2px solid #2FAD64
+      transition: .5s
+      &:hover
+        border-bottom: 2px solid $white-color
+        transition: .5s
+      &:active, &.active
+        border-bottom: 2px solid $white-color
+    &_img
+      padding: 3px 9px 3px 3px
+
+.block_button
+  margin-top: 17px
+  display: flex
+  flex-wrap: no-wrap
+.add_button
+  @extend .button
+  background-color: $transp-white
+  padding: 10px 30px 10px 5px
+  line-height: 17px
+  width: 235px
+  &_img
+    padding: 0 10px
+.singin
+  @extend .menu_item_a
+  margin-right: 0
+  margin-left: 15px
+  cursor: pointer
+// 
+.overlay 
+  height: 0%
+  width: 100%
+  position: fixed
+  z-index: 200
+  top: 0
+  left: 0
+  background-color: rgba(90,104,114, 0.5)
+  overflow-y: hidden
+  transition: 0.5s
+.overlay-content 
+  position: relative
+  top: -69px
+  width: 70%
+  margin-left: 73px
+  text-align: left
+.overlay-content_item 
+  padding: 8px
+  display: block
+  transition: 0.3s
+  margin-bottom: 17px
+  cursor: pointer
+.overlay-content_item_a
+  text-decoration: none
+  font-size: 14px
+  color: #fff
+  padding-bottom: 10px
+.overlay-content_item_a:hover, .active, .overlay-content_item_a:focus 
+  border-bottom: 2px solid #fff
+.closebtn 
+  position: absolute
+  top: 0
+  right: 0
+.open
+  text-align: right
+  color: #fff  
+  font-size: 30px
+  margin: 30px 15px 30px 0
+  cursor: pointer
+  display: inline-block
+  text-align: right
+@media #{$pc}
+  .nav
+    display: flex
+  .mobmenu
+    display: none
+@media #{$phone}
+  .nav
+    display: none
+  .mobmenu
+    display: block
+    display: flex
+    justify-content: space-between
+
+  .closebtn 
+    font-size: 30px;
+    top: 30px;
+    right: -12px;
+    color: #fff;
+  .nav_logo
+    margin: 7px 0 26px 15px
+    display: inline-block
+  .hoover  
+    color: #fff
+    border-bottom: 2px solid #fff
+    margin: 34px auto 32px 30px
+  .add_button
+    font-size: 14px
+    margin-bottom: 10px
+    width: 236px
+// 
+.header_title
+  margin-top: 63px
+.h1
+  font-size: 32px
+  font-weight: normal
+// Первая форма поиска по Украине и количеству комнат
+.choice
+  display: flex
+  flex-wrap: no-wrap
+  padding-top: 20px
+  justify-content: space-between
+  height: 122px
+.city
+  width: 340px
+.room_block
+  margin: 8px 0
+.room_label
+  margin-bottom: 20px
+  display:inline-block  
+.checkbox
+  line-height: 43px
+  margin-right: 20px
+  input 
+    display: none  
+    & + span:before 
+      content: " "
+      background-color: #2FAD64
+      border: 2px solid $white-color
+    &:checked + span 
+      content: " "
+      color: $text-black
+    &:checked + span:before 
+      content: " "
+      background-color: $white-color
+.choice_button
+  display: block
+  background-color: $white-color
+  padding: 10px 40px
+  color: $dark-green
+  height: 40px
+  border: 2px solid $dark-green
+  margin-top: 25px
+  width: 200px
+
+  transition: .5s
+  &:hover
+    background-color: $dark-green
+    padding: 10px 40px
+    color: $white-color
+    border: 2px solid $white-color
+    transition: .5s
+@media#{$phone}
+  .choice
+    flex-wrap: wrap
+  .header
+    padding: 0 10px 20px
+    margin-bottom: 15px
+  .header_title
+    margin-top: 35px
+  // .nav
+  //   display: flex
+  //   flex-wrap: no-wrap
+  //   justify-content: flex-start
+  //   &_block
+  //     display: flex
+  //     flex-wrap: wrap
+  //   &_logo
+  //     display: block
+  //     padding: 20px 0 0 0
+  //     margin-right: 40px
+  // .menu
+  //   margin-top: 12px
+  //   &_item
+  //     display: block
+  //     &_a 
+  //       display: block
+     
+  .block_button
+    margin-top: 17px
+    display: flex
+    flex-wrap: wrap
+  .add_button
+    display: block
+  .singin
+    display: block 
+  .header form
+    height: 260px 
+  .choice
+    display: block    
+  .city
+    display: block
+    margin-bottom: 15px
+  .room
+    display: block
+    margin-bottom: 15px
+  .choice_button
+    display: block
+    margin-bottom: 15px
+
+
+
+
+ 
