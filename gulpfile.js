@@ -6,6 +6,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     imagemin = require('gulp-imagemin');
+
 var path = {
     build: {
         html: 'build/',
@@ -14,13 +15,16 @@ var path = {
         img: 'build/img/',
         fonts: 'build/fonts/'
     },
-    src: {
+    src:{
         html:'src/*.html',
         js: 'src/js/main.js',
-        libsJs: 'src/js/libs/**/*.js',
         style: 'src/style/main.sass',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
+    },
+    libs:{        
+        js: 'src/js/libs/**/*.js',
+        css: 'src/style/libs/libs.scss'
     },
     watch: {
         html: 'src/**/*.html',
@@ -29,19 +33,31 @@ var path = {
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
-    clean: './build'
+    clean: 'build'
 };
- gulp.task('js', function() {
-        return gulp.src(path.src.libsJs)
+
+gulp.task('js-lib', function() {
+        return gulp.src(path.libs.js)
             .pipe(concat('libs.min.js'))
             .pipe(uglify())
             .pipe(gulp.dest(path.build.js));
-    });
+});
+
+gulp.task('js', function() {
+        return gulp.src(path.src.js)
+            .pipe(gulp.dest(path.build.js));
+});
 
 gulp.task('sass',function(){
     gulp.src(path.src.style)
         .pipe(sass().on('error',sass.logError))
         .pipe(prefixer())
+        .pipe(gulp.dest(path.build.css));
+});
+
+gulp.task('css-lib',function(){
+    gulp.src(path.libs.css)
+        .pipe(sass().on('error',sass.logError))
         .pipe(gulp.dest(path.build.css));
 });
 
@@ -64,4 +80,6 @@ gulp.task('watch',function(){
     gulp.watch(path.watch.img,['img']);
 });
 
-gulp.task('build', ['img', 'sass', 'js', 'html']);
+gulp.task('build', ['img', 'sass', 'js', 'html', 'js-lib','css-lib']);
+
+gulp.task('default',['build','watch']);
