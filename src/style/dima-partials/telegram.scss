@@ -1,15 +1,31 @@
-.telegram{
+.transparent-block{
 	@extend .wrap;
 	padding-top: 61px;
+	.transparent-slide{
+		min-height:500px;
+		width:100%;
+		text-align: center;
+	}
+}
+.telegram__radio-btn{
+	@media #{$pc}{
+		width: 44%;
+	}
+	@media #{$phone}{
+		width:80%;
+	}
+	margin: 0 auto;
+	margin-top: 22px;
+	display: flex;
+	justify-content: space-around;
 }
 .telegram__slider{
-	margin-top: 22px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
-.telegram__slides{
+.telegram__slide{
 	margin-top: 40px;
 	width:100%;
 	@media #{$pc}{
@@ -27,18 +43,8 @@
 	.iphone-img{width:100%;
 	}
 }
-.telegram__radio-btn{
-	@media #{$pc}{
-		width: 44%;
-	}
-	@media #{$phone}{
-		width:80%;
-	}
-	display: flex;
-	justify-content: space-around;
-}
 .telegram__radio-points{
-	margin-top:35px;
+	margin:35px auto;
 	width: 50px;
 	display: flex;
 	justify-content: space-around;
@@ -96,7 +102,6 @@
 	line-height:1.428;
 	margin-top: 15px;
 	margin-left: 15px;
-	
 	li{
 		list-style-type: decimal;
 		margin-bottom:12px;
