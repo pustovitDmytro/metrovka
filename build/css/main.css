@@ -18,14 +18,14 @@ a {
 li {
   list-style: none; }
 
-.wrap, .metro, .bestoffer, .lastoffer, .telegram, .metrovka-blog, .page-footer, .listing-wrapper {
+.wrap, .metro, .bestoffer, .lastoffer, .transparent-block, .metrovka-blog, .page-footer, .listing-wrapper {
   margin: 0 auto; }
   @media screen and (min-device-width: 890px) {
-    .wrap, .metro, .bestoffer, .lastoffer, .telegram, .metrovka-blog, .page-footer, .listing-wrapper {
+    .wrap, .metro, .bestoffer, .lastoffer, .transparent-block, .metrovka-blog, .page-footer, .listing-wrapper {
       width: 890px; } }
 
 @media screen and (min-device-width: 360px) and (max-device-width: 889px) {
-  .wrap, .metro, .bestoffer, .lastoffer, .telegram, .metrovka-blog, .page-footer, .listing-wrapper {
+  .wrap, .metro, .bestoffer, .lastoffer, .transparent-block, .metrovka-blog, .page-footer, .listing-wrapper {
     width: 100%; } }
 
 .button, .button_second, .add_button, .metro-choice_button {
@@ -566,11 +566,29 @@ label {
   .black-link:hover {
     color: #30AE63; }
 
-.telegram {
+.transparent-block {
   padding-top: 61px; }
+  .transparent-block .transparent-slide {
+    min-height: 500px;
+    width: 100%;
+    text-align: center; }
+
+.telegram__radio-btn {
+  margin: 0 auto;
+  margin-top: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; }
+  @media screen and (min-device-width: 890px) {
+    .telegram__radio-btn {
+      width: 44%; } }
+  @media screen and (min-device-width: 360px) and (max-device-width: 889px) {
+    .telegram__radio-btn {
+      width: 80%; } }
 
 .telegram__slider {
-  margin-top: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -585,7 +603,7 @@ label {
       -ms-flex-align: center;
           align-items: center; }
 
-.telegram__slides {
+.telegram__slide {
   margin-top: 40px;
   width: 100%;
   display: -webkit-box;
@@ -597,7 +615,7 @@ label {
       -ms-flex-align: center;
           align-items: center; }
   @media screen and (min-device-width: 890px) {
-    .telegram__slides {
+    .telegram__slide {
       margin-left: 84px; } }
 
 .telegram__photo {
@@ -608,21 +626,8 @@ label {
   .telegram__photo .iphone-img {
     width: 100%; }
 
-.telegram__radio-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
-  @media screen and (min-device-width: 890px) {
-    .telegram__radio-btn {
-      width: 44%; } }
-  @media screen and (min-device-width: 360px) and (max-device-width: 889px) {
-    .telegram__radio-btn {
-      width: 80%; } }
-
 .telegram__radio-points {
-  margin-top: 35px;
+  margin: 35px auto;
   width: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -978,11 +983,31 @@ label {
   padding: 10px 20px 15px;
   margin-bottom: 15px; }
 
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media screen and (min-device-width: 360px) and (max-device-width: 889px) {
+    .wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+@media screen and (min-device-width: 890px) {
+  .slide {
+    width: 66%;
+    min-height: 185px; } }
+
+@media screen and (min-device-width: 360px) and (max-device-width: 889px) {
+  .slide {
+    min-height: 200px; } }
+
 .result {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  @media pc {
+  @media screen and (min-device-width: 890px) {
     .result {
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
@@ -1001,7 +1026,8 @@ label {
         margin-right: 15px;
         -webkit-box-flex: 1;
             -ms-flex-positive: 1;
-                flex-grow: 1; } }
+                flex-grow: 1;
+        width: 33%; } }
     .result_img_item {
       width: 100%;
       border-radius: 3px; }
